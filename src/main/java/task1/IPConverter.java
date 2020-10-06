@@ -50,7 +50,7 @@ public class IPConverter {
     private static int stringToInt32(String stringIpv4) {
         String[] quarters = stringIpv4.split("\\.");
         if (quarters.length != 4) {
-            throw new InputMismatchException(); //todo own exception
+            throw new InputMismatchException();
         }
         Integer[] ints = new Integer[4];
         ints[0] = Integer.parseUnsignedInt(quarters[0]);
@@ -58,7 +58,7 @@ public class IPConverter {
         ints[2] = Integer.parseUnsignedInt(quarters[2]);
         ints[3] = Integer.parseUnsignedInt(quarters[3]);
         if (ints[0] > 255 || ints[1] > 255 || ints[2] > 255 || ints[3] > 255) {
-            throw new NumberFormatException(); //todo own exception
+            throw new NumberFormatException();
         }
         ints[0] <<= 24;
         ints[1] <<= 16;

@@ -43,8 +43,8 @@ public class LoadDatabase {
         List<Posting> postings = postingParser.parseStrings(postingStrings);
 
         return args -> {
-            log.info("Preloading " + accountService.saveAll(accounts));
-            log.info("Preloading " + postingService.saveAll(postings));
+            log.info("Uploading " + accountService.saveAll(accounts));
+            log.info("Uploading " + postingService.saveAll(postings));
         };
     }
 }
